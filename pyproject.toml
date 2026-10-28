@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "slicesniff"
+version = "0.1.0"
+description = "Sniff out the slices where your classifier is confidently wrong — ranked, reproducible failure cards from predictions alone."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Habib Ur Rehman" },
+]
+keywords = [
+    "slice-discovery",
+    "error-analysis",
+    "model-debugging",
+    "calibration",
+    "confident-errors",
+    "failure-analysis",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7",
+    "build>=1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/habib-analyst/slicesniff"
+Issues = "https://github.com/habib-analyst/slicesniff/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
